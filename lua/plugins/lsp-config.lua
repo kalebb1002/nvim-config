@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "java_language_server", "jdtls" },
+        ensure_installed = { "lua_ls", "jdtls" },
       })
     end,
   },
@@ -20,9 +20,6 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       lspconfig.lua_ls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.java_language_server.setup({
         capabilities = capabilities
       })
 
